@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SuperHerosSchool.data;
+
 
 namespace SuperHerosSchool.Controllers
 {

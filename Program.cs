@@ -1,3 +1,5 @@
+global using Microsoft.EntityFrameworkCore;
+global using SuperHerosSchool.data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
