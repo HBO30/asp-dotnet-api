@@ -12,9 +12,18 @@ namespace SuperHerosSchool.Controllers
         {
             _context = context;
         }
+        [HttpGet]
         public async Task<ActionResult<List<Playlist>>> Get()
         {
             return Ok(await _context.Playlists.ToListAsync());
+        }
+        [HttpPost]
+           public async Task<ActionResult<List<Playlist>>> AddPlaylist(Course course)
+        {
+            _context.Courses.Add(course);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.Courses.ToListAsync());
         }
     }
 }
